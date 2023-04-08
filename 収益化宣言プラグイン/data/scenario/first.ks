@@ -17,6 +17,11 @@
 ;最初は右下のメニューボタンを非表示にする
 [hidemenubutton]
 
+[plugin name="monetization"] 
+
+
+@close ask="false" 
+
 ;タイトル画面へ移動
 @jump storage="title.ks"
 
