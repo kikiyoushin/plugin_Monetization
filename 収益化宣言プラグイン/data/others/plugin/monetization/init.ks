@@ -16,4 +16,19 @@ firstで必ず1度呼び出すようにする。
 ・呼び出す画像の種類
 
 */
+
+; ここまでのパス
+@eval exp="tf.ilnk='../others/plugin/monetization/'"
+
+; 必要な変数を定義していくとこ(first.ksでないとエラーの仕組みにする。)
+[jump storage="&tf.ilnk+'func.ks'" ]
+*rtfunc
+
+;注意書き。「このゲームは収益化宣言プラグインを入れています。とか諸注意。」
+
+; 画面外で操作が行われたときの処理
+[jump storage="&tf.ilnk+'pause.ks'" ]
+
+*rtpause
+
 [return]
