@@ -1,4 +1,5 @@
-; 画像表示箇所
+;; 画像表示箇所
+; sleepgameにしたので何しても元に戻るぞ。
 
 
 
@@ -10,6 +11,8 @@
 [endhtml ]
 [wait time="5000" ]
 [cm]
+
+[awakegame variable_over=true bgm_over=false]
 [s]
 
 @eval exp="alert('CMにいるよ')" 

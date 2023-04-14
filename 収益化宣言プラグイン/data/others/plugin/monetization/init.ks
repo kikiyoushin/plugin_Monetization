@@ -18,16 +18,20 @@ firstで必ず1度呼び出すようにする。
 */
 
 ; ここまでのパス
-@eval exp="tf.ilnk='../others/plugin/monetization/'"
+@eval exp="f.ilnk='../others/plugin/monetization/'"
 
 ; 必要な変数を定義していくとこ(first.ksでないとエラーの仕組みにする。)
-[jump storage="&tf.ilnk+'func.ks'" ]
+[jump storage="&f.ilnk+'func.ks'" ]
 *rtfunc
 
 ;注意書き。「このゲームは収益化宣言プラグインを入れています。とか諸注意。」
+; ここでモード分岐。
+;sf.monetization_modeが0の時無配信、1の時配信。2はパッチで変更。
+[jump storage="&f.ilnk+'allocation.ks'" ]
+*rtalctn
 
 ; 画面外で操作が行われたときの処理
-[jump storage="&tf.ilnk+'pause.ks'" ]
+[jump storage="&f.ilnk+'pause.ks'" ]
 
 *rtpause
 

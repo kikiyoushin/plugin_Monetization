@@ -17,8 +17,8 @@ function pause() {
 	// 実行させる処理を記述
     alert("パッシヴウィンドウになりました。")
 
-	var hoge =TYRANO.kag.variable.tf['ilnk']+'cm.ks';
-	tyrano.plugin.kag.ftag.startTag("jump", { storage:hoge,} );
+	var hoge =TYRANO.kag.stat.f['ilnk']+'cm.ks';
+	tyrano.plugin.kag.ftag.startTag("sleepgame", { storage:hoge,} );
 
 }
 
@@ -29,4 +29,4 @@ window.addEventListener('focus', play, false);
 window.addEventListener('blur', pause, false);
 [endscript ]
 
-[jump storage="&tf.ilnk+'init.ks'" target="rtpause"  ]
+[jump storage="&f.ilnk+'init.ks'" target="rtpause"  ]
