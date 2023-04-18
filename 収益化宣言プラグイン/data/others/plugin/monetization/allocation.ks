@@ -43,12 +43,13 @@
 [html ]
 [emb exp="tf.text" ]
 [endhtml ]
-[s]
-; 無配信モード
 
-; 無料配信モード
+;ゲージがたまるアニメ入れる＃＃＃
 
-; 有料配信モード
+[wait time="5000" ]
+
 
 ;これは初回呼び出しなのでreturnでいいかも。
 [jump storage="&f.ilnk+'init.ks'" target="rtalctn"  ]
+
+[s]

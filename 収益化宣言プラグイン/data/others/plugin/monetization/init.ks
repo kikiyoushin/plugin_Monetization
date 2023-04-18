@@ -24,11 +24,21 @@ firstで必ず1度呼び出すようにする。
 [jump storage="&f.ilnk+'func.ks'" ]
 *rtfunc
 
+; mode2の時のみ表示。「この画面を配信に載せることで、あなたは正式な手順で配信を行っていることの証明になります」Yボタン
+
 ;注意書き。「このゲームは収益化宣言プラグインを入れています。とか諸注意。」
 ; ここでモード分岐。
 ;sf.monetization_modeが0の時無配信、1の時配信。2はパッチで変更。
-[jump storage="&f.ilnk+'allocation.ks'" ]
+;[jump storage="&f.ilnk+'allocation.ks'" ]
 *rtalctn
+
+/*
+あとやること
+sf.monetization_modeによる下記の違い
+パッチ作成
+awakegameだけど、awakegame中に発生したとき大丈夫か？
+mode2処理
+*/
 
 ; 画面外で操作が行われたときの処理
 [jump storage="&f.ilnk+'pause.ks'" ]
