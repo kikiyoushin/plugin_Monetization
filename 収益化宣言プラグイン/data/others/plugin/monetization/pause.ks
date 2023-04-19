@@ -16,6 +16,8 @@ function play() {
 function pause() {
 	// 実行させる処理を記述
     alert("パッシヴウィンドウになりました。")
+	//すでにsleepgameの状態の時、awakeで解除する。
+	if (tyrano.plugin.kag.tmp.sleep_game != null)tyrano.plugin.kag.ftag.startTag("awakegame", { variable_over:true,} );
 
 	var hoge =TYRANO.kag.stat.f['ilnk']+'cm.ks';
 	tyrano.plugin.kag.ftag.startTag("sleepgame", { storage:hoge,} );

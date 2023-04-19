@@ -7,16 +7,62 @@ sf.monetization_modeが0と1の時の表示を変える
 */
 
 ;表示を全てデストロイする
-;あとでテクニックサンプル集からデストロイ持ってくる
 [reset_all]
 
+;[web url="./data/others/plugin/monetization/newpage.html"]
+;[loadcss file="&f.ilnk+'style.css'" ]
+[loadcss file="./data/others/plugin/monetization/style.css" ]
 
+@eval exp="tf.hoge='もし配信している場合、配信モードに切り替えてください。'" cond="sf.monetization_mode==0"  
+@eval exp="tf.hoge='もし収益が発生している場合このゲームの規則違反です。ご注意ください。'" cond="sf.monetization_mode==1"  
+
+[iscript ]
+    tf.xpl=200
+    tf.spr=600
+    tf.yp=500
+    tf.text1=""
+    tf.text2=""
+[endscript ]
+
+[glink name="cntbtnl" width="200"  x="200" color="blue"  text="私は配信をしていません" cond="sf.monetization_mode==0"]
+
+[glink name="cntbtnr" width="200"  x="500" color="red"  text="私は配信をしているので切り替えます" cond="sf.monetization_mode==0"]
+
+
+[glink name="cntbtnc" x="200" color="red"  text="私の配信には収益は発生していません" cond="sf.monetization_mode==1"]
+
+
+[glink name="cntbtn" x="200" color="green" text="パッチ購入ページへ(インターネット接続が必要です)"  ]
+[iscript ]
+
+    //xy0,0を左上からからオブジェクト中央にする。画面に出してからcssを編集する。
+    $('.glink_button').css({
+        'background-position': 'center center',
+        'top' : 'auto','bottom' : '30px',
+        })
+        $('.cntbtnc').css({'left':'50%','right':'auto','bottom':'+=100px',
+        'transform': 'translateX(-50%)translateY(0%)'}),
+        $('.cntbtnl').css({'left':'100px','right':'auto','bottom':'+=100px'})
+        $('.cntbtnr').css({'left':'auto','right':'100px','bottom':'+=100px'})
+[endscript ]
+
+; このゲームは収益化プラグインを導入しています。しばらくお待ちください。
 [html ]
 
-<!--この表示画像をいろんなのに変えられるようにする-->
-<img src="data/others/plugin/monetization/img/free.png">
+<body>
+    <section class="container">
+        <dl>
 
-<font color="red"><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p></font>
+            <dt>
+                <img src="./data/others/plugin/monetization/img/free.png" alt="絵">
+            </dt>
+            <dd>
+                <p>確認のためボタンを押してください[emb exp="tf.hoge"]</p>
+            </dd>
+        </dl>
+    </section>
+
+</body>
 [endhtml ]
 [s]
 [wait time="5000" ]

@@ -17,6 +17,8 @@
 ;最初は右下のメニューボタンを非表示にする
 [hidemenubutton]
 
+[body bgcolor="gray" ]
+
 [plugin name="monetization"] 
 
 
