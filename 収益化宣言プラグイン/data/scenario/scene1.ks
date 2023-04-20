@@ -54,7 +54,10 @@
 [resetfont  ]
 
 #
-誰だ！？[p]
+誰だ！？
+
+[confirm]
+[p]
 
 ;キャラクター登場
 [chara_show  name="akane"  ]

@@ -53,4 +53,22 @@
 [layopt layer="message1" visible="false"]
 [endmacro]
 
+; ----------------------------------------------------------
+;manetizationオリジナルマクロ
+; ----------------------------------------------------------
+
+
+; ----------------------------------------------------------
+;[confirm]
+;任意のタイミングで確認画面を表示させます。
+;sleepgame中は呼び出さないでください。
+;[s]など画面が止まっているときが最適です。(選択肢や章の始まりなど)
+
+[macro name="confirm" ]
+
+    @sleepgame storage="&f.ilnk+'cm.ks'" 
+
+[endmacro ]
+
+
 [jump storage="&f.ilnk+'init.ks'" target="rtfunc"  ]
