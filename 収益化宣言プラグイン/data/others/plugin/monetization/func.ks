@@ -66,7 +66,7 @@
 
 [macro name="confirm" ]
 
-    @sleepgame storage="&f.ilnk+'cm.ks'" 
+    @sleepgame storage="&f.ilnk+'cm.ks'" cond="sf.monetization_mode!=2" 
 
 [endmacro ]
 
