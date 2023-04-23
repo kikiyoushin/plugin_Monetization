@@ -147,4 +147,4 @@ sequenceDiagram
 
 ## 終わりに
 
-お気軽にissueまでどうぞ。
+お気軽にissuesまでどうぞ。
