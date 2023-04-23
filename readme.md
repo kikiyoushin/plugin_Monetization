@@ -127,7 +127,7 @@ sequenceDiagram
 ## わかっている問題点
 
 - [confirm]の後、コードが1行先に進む
-    - [sleepgame]中に[dialog]を発生させているため。β版で削除予定。
+    - [sleepgame]中に[dialog]を発生させているため？β版で削除予定。
 
 ## 適用方法
 
