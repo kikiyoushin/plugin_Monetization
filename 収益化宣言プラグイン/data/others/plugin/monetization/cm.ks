@@ -26,7 +26,7 @@ sf.monetization_modeが0と1の時の表示を変える
 
 [glink name="cntbtnl" target="modeset" exp="sf.monetization_mode=0" width="200"  x="200" color="blue"  text="私は配信をしていません" cond="sf.monetization_mode==0"]
 
-[glink name="cntbtnr" target="" exp="sf.monetization_mode=1" width="200"  x="500" color="red"  text="私は配信をしているので切り替えます" cond="sf.monetization_mode==0"]
+[glink name="cntbtnr" exp="sf.monetization_mode=1" width="200"  x="500" color="red"  text="私は配信をしているので切り替えます" cond="sf.monetization_mode==0"]
 
 
 [glink name="cntbtnc" target="modeset" exp="sf.monetization_mode=1" x="200" color="red"  text="私の配信には収益は発生していません" cond="sf.monetization_mode==1"]
