@@ -15,7 +15,7 @@ function play() {
 // ウィンドウがアクティブでなくなった際に実行する関数
 function pause() {
 	// 実行させる処理を記述
-    alert("パッシヴウィンドウになりました。")
+    //alert("パッシヴウィンドウになりました。")
 	//すでにsleepgameの状態の時、awakeで解除する。
 	if (tyrano.plugin.kag.tmp.sleep_game != null)tyrano.plugin.kag.ftag.startTag("awakegame", { variable_over:true,} );
 

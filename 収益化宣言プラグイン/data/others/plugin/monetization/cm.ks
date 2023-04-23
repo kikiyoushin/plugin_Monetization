@@ -32,7 +32,8 @@ sf.monetization_modeが0と1の時の表示を変える
 [glink name="cntbtnc" target="modeset" exp="sf.monetization_mode=1" x="200" color="red"  text="私の配信には収益は発生していません" cond="sf.monetization_mode==1"]
 
 
-[glink name="cntbtn" x="200" color="green" text="パッチ購入ページへ(インターネット接続が必要です)"  ]
+[glink name="cntbtn" x="200" color="green" storage="&f.ilnk+'store.ks'"  text="パッチ購入ページへ(インターネット接続が必要です)"  ]
+
 [iscript ]
 
     //xy0,0を左上からからオブジェクト中央にする。画面に出してからcssを編集する。
@@ -71,5 +72,3 @@ sf.monetization_modeが0と1の時の表示を変える
 
 [awakegame variable_over=true bgm_over=false]
 [s]
-
-@eval exp="alert('CMにいるよ')" 

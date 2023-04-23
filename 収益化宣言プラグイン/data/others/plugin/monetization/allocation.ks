@@ -13,6 +13,7 @@
 
 [endhtml]
 [s]
+
 *modeset
 [cm]
 [iscript]
@@ -39,18 +40,17 @@
     [endscript ]
     [endignore ]
 
-[glink x="200" y="500"   color="green" text="パッチ購入ページへ(インターネット接続が必要です)"  ]
+[glink x="200" y="500" color="green" storage="&f.ilnk+'store.ks'"  text="パッチ購入ページへ(インターネット接続が必要です)"  ]
 [html ]
 [emb exp="tf.text" ]
 [endhtml ]
 
 ;ゲージがたまるアニメ入れる＃＃＃
 
-;あとで5000に戻す
-[wait time="500" ]
+;消えるまでの時間
+[wait time="5000" ]
 
 
-;これは初回呼び出しなのでreturnでいいかも。
 [jump storage="&f.ilnk+'init.ks'" target="rtalctn"  ]
 
 [s]
